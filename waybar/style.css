@@ -1,56 +1,80 @@
-@import '../../.cache/wal/colors-waybar.css';
-
 * {
+  font-family: "Iosevka Nerd Font Mono";
   border: none;
-  border-radius: 0;
   min-height: 0;
-  font-family: "Iosevka Term";
-  font-size: 16px;
-  padding: 0;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.0);
-  color: @color14;
+  background-color: #1d2021;
+  border-radius: 0;
+  color: #928374;
+  padding: 2px 12px;
+  transition: 0.3s all;
 }
 
-tooltip {
-  background-color: #202020;
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 0 1rem;
+  color: #fabd2f;
+  border: none;
+  font-weight: bold;
 }
 
-#clock,
-#tray,
-#cpu,
-#memory,
-#battery,
-#network,
-#pulseaudio {
-  margin: 2px 2px 0px 0px;
-  padding: 2px 8px;
+.modules-center {
+  padding: 2px;
+  font-weight: bold;
 }
 
+#custom-icon {
+  font-size: 18px;
+  padding-right: 0px;
+  color: #fabd2f;
+}
+
+#window {
+  font-weight: bold;
+  /* color: #a89984; */
+  color: #fabd2f;
+  transition: all 0.3s ease;
+}
+
+#workspaces {
+  font-weight: bold;
+  font-size: 11px;
+  border: none;
+  color: #fabd2f;
+}
 
 #workspaces button {
-  color: @color15;
+  color: #ebdbb2;
+  border-radius: 0;
+  transition: 0.2s ease-out;
+  border-bottom: 1px solid transparent;
+  padding: 2px;
+  font-weight: bold;
+  font-size: 13px;
 }
 
-
-#workspaces button.focused {
-  background-color: #9b5d7f;
-  color: @color9;
+#workspaces button.urgent {
+  border-bottom: 1px solid @blue;
 }
 
 #workspaces button.active {
-  background-color: @color15;
-  color: @color12;
+  /* background-color: #d79921; */
+  color: #d79921;
 }
 
-#battery,
-#tray,
-#clock,
-#cpu,
-#pulseaudio,
-#memory {
-  /* background-color: none; */
-  color: @color16;
+#tray {
+  color: #fbf1c7;
+}
+
+#clock {
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+#clock:hover,
+#pulseaudio:hover{
+  color: #fbf1c7;
 }

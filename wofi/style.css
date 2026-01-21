@@ -1,5 +1,3 @@
-@import ".cache/wal/colors-waybar.css";
-
 * {
   border: none;
   box-shadow: none;
@@ -8,21 +6,22 @@
 
 window {
   font-size: 16px;
-  font-family: "Iosevka Term";
-  background-color: @background;
-  /* border-radius: 8px; */
+  font-family: "CaskaydiaCove Nerd Font";
+  background-color: #282828;
   opacity: 0.90;
+  border: 1px solid #928374;
+  border-radius: 25px;
 }
 
 #outer-box {
   margin: 10px 10px 20px 10px;
-  background-color: @background;
+  background-color: #282828;
   opacity: 0.90;
 }
 
 #inner-box {
   margin: 10px;
-  background-color: @background;
+  background-color: #282828;
   opacity: 0.90;
 }
 
@@ -34,24 +33,24 @@ window {
 #entry #text {
   padding: 0px 0px 0px 10px;
   font-weight: normal;
-  color: @color7;
+  color: #ebdbb2;
 }
 
 #entry:selected {
-  background-color: @color4;
+  background-color: #1d2021;
 }
 
 #entry:selected #text {
   padding: 0px 0px 0px 10px;
   font-weight: normal;
-  color: @color0;
 }
 
 #input {
-  background: transparent;
-  margin: 0px 5px 0px 20px;
-  color: @color7;
+  background-color: #1d2021;
+  margin: 5px;
+  color: #ebdbb2;
   padding: 5px;
+  border-radius: 22px;
 }
 
 #image {
@@ -61,4 +60,5 @@ window {
 
 #scroll {
   margin: 0px;
+  border: none;
 }
