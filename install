@@ -15,7 +15,6 @@ hyprsunset
 qt5-wayland 
 qt6-wayland
 wireplumber
-vicinae
 cliphist
 hyprshot
 thunar
@@ -27,8 +26,9 @@ zsh
 unzip
 tumbler
 fuse2
-solaar (-Sy)
 man-db 
 man-pages
 gimp
 ripgrep
+eog
+vlc
