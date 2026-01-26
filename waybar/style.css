@@ -47,7 +47,7 @@ window#waybar {
 }
 
 #workspaces button {
-  color: #ebdbb2;
+  color: #fabd2f;
   border-radius: 0;
   transition: 0.2s ease-out;
   border-bottom: 1px solid transparent;
@@ -61,8 +61,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-  /* background-color: #d79921; */
-  color: #d79921;
+  background-color: #d79921;
+  color: #fbf1c7;
 }
 
 #tray {
@@ -73,7 +73,8 @@ window#waybar {
   transition: all 0.3s ease;
   font-weight: bold;
 }
-
+#cpu:hover,
+#memory:hover,
 #clock:hover,
 #pulseaudio:hover{
   color: #fbf1c7;

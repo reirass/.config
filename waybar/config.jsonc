@@ -5,27 +5,33 @@
   "passthrough": false,
   "reload_style_on_change": true,
 
-
-
-  // Gaps between modules
   "spacing": 10,
 
-  // Gap from the top of the screen
   "margin-top": 0,
   "margin-left": 0,
   "margin-right": 0,
   "margin-bottom": 1,
 
-  "modules-left": ["custom/icon", "hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["tray", "clock", "pulseaudio"],
+  "modules-left": ["custom/icon", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "pulseaudio", "memory", "cpu"],
 
   "custom/icon": {
     "format": "󰣇"
   },
 
+  "memory": {
+    "interval": 2,
+    "format": "mem {used:0.1f}g |",
+    "on-click": "kitty -e btop"
+  },
+  "cpu": {
+    "format": "cpu {usage}%",
+    "on-click": "kitty -e btop"
+  },
 
   "pulseaudio": {
+    "format": "vol {volume}% |",
 	  "scroll-step": 2,
 	  "max-volume": 100,
 	  "on-click": "pavucontrol"
@@ -35,12 +41,12 @@
     "separate-outputs": true,
     "format": "{class}",
     "rewrite": {
-      "": "Desktop",
-      "kitty": "Kitty",
-      "vesktop": "Discord",
-      "nemo": "Nemo",
-      "firefox": "Browser",
-      "spotify": "Spotify"
+      "": "desktop",
+    //   "kitty": "Kitty",
+    //   "vesktop": "Discord",
+    //   "nemo": "Nemo",
+    //   "firefox": "Browser",
+    //   "spotify": "Spotify"
     }
   },
 
@@ -56,7 +62,7 @@
   },
 
   "clock": {
-    "format": "<span></span>  {:%H:%M %d.%m}",
+    "format": "<span></span>  {:%H:%M %d.%m %A}",
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
