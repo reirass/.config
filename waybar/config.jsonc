@@ -5,50 +5,46 @@
   "passthrough": false,
   "reload_style_on_change": true,
 
-  "spacing": 10,
+  "spacing": 5,
 
   "margin-top": 0,
   "margin-left": 0,
   "margin-right": 0,
-  "margin-bottom": 1,
+  "margin-bottom": 0,
 
-  "modules-left": ["custom/icon", "hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock"],
-  "modules-right": ["tray", "pulseaudio", "memory", "cpu"],
-
-  "custom/icon": {
-    "format": "󰣇"
-  },
+  "modules-left": ["hyprland/workspaces"],
+  // "modules-center": ["clock"],
+  "modules-right": ["tray", "pulseaudio", "memory", "cpu", "clock"],
 
   "memory": {
     "interval": 2,
-    "format": "mem {used:0.1f}g |",
+    "format": "  {used:0.1f}g |",
     "on-click": "kitty -e btop"
   },
   "cpu": {
-    "format": "cpu {usage}%",
+    "format": "  {usage}% |",
     "on-click": "kitty -e btop"
   },
 
   "pulseaudio": {
-    "format": "vol {volume}% |",
+    "format": "󱄠 {volume}% |",
 	  "scroll-step": 2,
 	  "max-volume": 100,
 	  "on-click": "pavucontrol"
   },
 
-  "hyprland/window": {
-    "separate-outputs": true,
-    "format": "{class}",
-    "rewrite": {
-      "": "desktop",
-    //   "kitty": "Kitty",
-    //   "vesktop": "Discord",
-    //   "nemo": "Nemo",
-    //   "firefox": "Browser",
-    //   "spotify": "Spotify"
-    }
-  },
+  // "hyprland/window": {
+  //   "separate-outputs": true,
+  //   "format": "{class}",
+  //   "rewrite": {
+  //     "": "desktop",
+  //   //   "kitty": "Kitty",
+  //   //   "vesktop": "Discord",
+  //   //   "nemo": "Nemo",
+  //   //   "firefox": "Browser",
+  //   //   "spotify": "Spotify"
+  //   }
+  // },
 
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -62,12 +58,12 @@
   },
 
   "clock": {
-    "format": "<span></span>  {:%H:%M %d.%m %A}",
+    "format": "<span></span>{:%H:%M %d.%m}",
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "format": {
-        "today": "<span color='#af3a03'><b>{}</b></span>"
+        "today": "<span color='#f79f57'><b>{}</b></span>"
       }
     },
     "actions": {

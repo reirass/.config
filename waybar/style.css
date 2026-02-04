@@ -1,41 +1,42 @@
 * {
-  font-family: "Iosevka Nerd Font Mono";
+  font-family: "CaskaydiaCove Nerd Font";
   border: none;
   min-height: 0;
 }
 
 window#waybar {
-  background-color: #1d2021;
+  background-color: #0a0a0a;
   border-radius: 0;
   color: #928374;
   padding: 2px 12px;
   transition: 0.3s all;
 }
 
-.modules-left,
 .modules-center,
 .modules-right {
-  padding: 0 1rem;
-  color: #fabd2f;
+  padding-right: 4px;
+  color: #b3b1b1;
   border: none;
   font-weight: bold;
 }
 
+.modules-left {
+  color: #b3b1b1;
+}
 .modules-center {
   padding: 2px;
   font-weight: bold;
 }
 
-#custom-icon {
-  font-size: 18px;
-  padding-right: 0px;
-  color: #fabd2f;
-}
+/* #custom-icon { */
+/*   font-size: 18px; */
+/*   padding-right: 0px; */
+/*   color: #b3b1b1; */
+/* } */
 
 #window {
   font-weight: bold;
-  /* color: #a89984; */
-  color: #fabd2f;
+  color: #b3b1b1;
   transition: all 0.3s ease;
 }
 
@@ -43,11 +44,11 @@ window#waybar {
   font-weight: bold;
   font-size: 11px;
   border: none;
-  color: #fabd2f;
+  color: #b3b1b1;
 }
 
 #workspaces button {
-  color: #fabd2f;
+  color: #b3b1b1;
   border-radius: 0;
   transition: 0.2s ease-out;
   border-bottom: 1px solid transparent;
@@ -61,8 +62,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: #d79921;
-  color: #fbf1c7;
+  /* background-color: #d79921; */
+  color: #ffb578;
 }
 
 #tray {
@@ -77,5 +78,5 @@ window#waybar {
 #memory:hover,
 #clock:hover,
 #pulseaudio:hover{
-  color: #fbf1c7;
+  color: #f7c59c;
 }
