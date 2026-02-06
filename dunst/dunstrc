@@ -3,26 +3,26 @@
     follow = keyboard
     width = (250, 500)
     height = (0, 550)
-    offset = (2, 2)
+    offset = (15, 15)
     padding = 1
     horizontal_padding = 5
     gap_size = 1
     transparency = 20
     frame_width = 1
     frame_color="#a37d5d"
-    font = Iosevka Term 11
+    font = CaskaydiaCove Nerd Font 11
     corner_radius = 0
     min_icon_size = 32
     max_icon_size = 32
     format = "<b>%s</b>\n%b"
 
 [urgency_low]
-    foreground = "#98971a"
+    foreground = "#f7c59c"
     background = "#282828"
     timeout = 3
 
 [urgency_normal]
-    foreground = "#98971a"
+    foreground = "#f7c59c"
     background = "#282828"
     timeout = 5
 
