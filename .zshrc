@@ -8,7 +8,7 @@ ZSH_THEME="robbyrussell"
 plugins=( 
     git
     # zsh-autosuggestions
-    zsh-syntax-highlighting
+    # zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -35,19 +35,17 @@ alias gs="git status"
 alias gi="git init"
 alias ga="git add"
 alias gm="git commit -m"
-alias gp="git push"
 alias gb="git branch"
 alias gc="git checkout"
-alias gpu="git pull"
-alias gpo="git pull origin"
 alias gl="git log"
 alias gd="git diff"
-alias gra="git remote add"
-alias grr="git remote rm"
 alias gsh="git stash"
 alias nox="shutdown now"
 alias py="python"
 alias ff="fastfetch"
-alias program="cd ~/dr/hd/Programming/"
+alias program="cd /dr/hd/Programming/"
 alias hypr="cd ~/.config/hypr"
 alias zed="zeditor"
+alias vi="nvim"
+
+export PATH=$PATH:/home/reiras/.spicetify
