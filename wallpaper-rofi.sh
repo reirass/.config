@@ -4,7 +4,7 @@ WALLPAPER_DIR="/dr/hd/DownloadsHD/Wallpapers"
 HYPRPAPER_CONF="$HOME/.config/hypr/hyprpaper.conf"
 
 # Escolher pasta com rofi
-PASTA=$(ls -1 "$WALLPAPER_DIR" | rofi -dmenu -p "Pasta de Wallpapers")
+PASTA=$(ls -1 "$WALLPAPER_DIR" | rofi -dmenu -p "wallpapers")
 
 [ -z "$PASTA" ] && exit 0
 
@@ -29,4 +29,4 @@ sed -i "s|^path = .*|path = $IMG_PATH|" "$HYPRPAPER_CONF"
 pkill hyprpaper
 hyprpaper &
 
-notify-send "Wallpaper alterado" "$(basename "$IMG_PATH")"
+notify-send "Papel de parede alterado" "$(basename "$IMG_PATH")"
