@@ -10,8 +10,8 @@ hide_window_decorations yes
 placement_strategy top
 
 # -- color scheme --
-background_opacity 0.95
-background_blur 10
+background_opacity 1
+background_blur 0
 
 # -- misc settings --
 enable_audio_bell no
@@ -31,13 +31,13 @@ font_size          14
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark
+# Adventure Time
 include current-theme.conf
 # END_KITTY_THEME
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="CaskaydiaCove Nerd Font"
+font_family      family="IosevkaTerm Nerd Font"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
