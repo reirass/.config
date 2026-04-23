@@ -7,6 +7,10 @@ noto-fonts-emoji
 noto-fonts-cjk
 -------------
 waybar
+hyprsunset
+btop
+fastfetch
+hyprpolkitagent
 hyprpaper
 firefox
 neovim
@@ -17,11 +21,15 @@ qt6-wayland
 wireplumber
 cliphist
 hyprshot
-thunar
-evremap-git
+lsd
+evremap-git (yay)
+adw-gtk-theme
+pavucontrol
+nemo
+nwg-look
 python-pywal16
 zathura
-zathura-pdf-mu-pdf
+zathura-pdf-mupdf
 zsh
 unzip
 tumbler
@@ -35,3 +43,5 @@ vlc
 rofi
 vesktop
 yazi
+spotify-launcher
+obsidian
