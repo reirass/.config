@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLPAPER_DIR="/dr/hd/DownloadsHD/Wallpapers"
+WALLPAPER_DIR="/dr/hd1tb/DownloadsHD/wallpapers"
 HYPRPAPER_CONF="$HOME/.config/hypr/hyprpaper.conf"
 
 # Escolher pasta com rofi
