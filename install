@@ -46,3 +46,7 @@ vesktop
 yazi
 spotify-launcher
 obsidian
+
+----- POST INSTALL CONFIGS:
+CHANGE OPEN IN TERMINAL INSIDE NEMO TO WORK WITH KITY:
+sudo ln -s /usr/bin/kitty /usr/bin/gnome-terminal
