@@ -17,12 +17,12 @@
     format = "<b>%s</b>\n%b"
 
 [urgency_low]
-    foreground = "#bf7969"
+    foreground = "#fff"
     background = "#282828"
     timeout = 3
 
 [urgency_normal]
-    foreground = "#bf7969"
+    foreground = "#fff"
     background = "#282828"
     timeout = 5
 
