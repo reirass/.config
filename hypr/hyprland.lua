@@ -3,7 +3,6 @@
 -- Create your files separately and then link them to this file like this:
 -- source = ~/.cache/wal/colors-hyprland.conf
 
-
 --## MONITORS ###
 -- See https://wiki.hyprland.org/Configuring/Monitors/
 -- Autostart
@@ -24,7 +23,6 @@ hl.monitor({
 })
 
 --## PROGRAMS ###
-
 -- See https://wiki.hyprland.org/Configuring/Keywords/
 
 local terminal = "kitty"
@@ -60,15 +58,13 @@ hl.env("HYPRCURSOR_SIZE", 24)
 -- }
 
 --## LOOK AND FEEL ###
-
 -- Refer to https://wiki.hyprland.org/Configuring/Variables/
-
 -- https://wiki.hyprland.org/Configuring/Variables/#general
 
 hl.config({
     general = {
-        gaps_in = 0,
-        gaps_out = 10,
+        gaps_in = 1,
+        gaps_out = 1,
         border_size = 1,
         -- https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
         -- Set to true enable resizing windows by clicking and dragging on borders and gaps
@@ -87,7 +83,7 @@ hl.config({
 
 hl.config({
     decoration = {
-        rounding = 8,
+        rounding = 1,
         -- rounding_power = 6
         -- transparency of focused and unfocused windows
         active_opacity = 1,
@@ -211,11 +207,13 @@ local mainMod = "SUPER"
 
 -- Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 
+-- change wallpaper with rofi + yazi
 hl.bind("SUPER" .. " + " .. "W", hl.dsp.exec_cmd("~/wallpaper-rofi.sh"))
 
+-- clipboard history with rofi
 hl.bind("SUPER" .. " + " .. "V", hl.dsp.exec_cmd("cliphist list| rofi -dmenu -display-columns 2| cliphist decode| wl-copy"))
 
-hl.bind(mainMod .. " + " .. "Return", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + " .. "Return", hl.dsp.exec_cmd(terminal))
 
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "Q", hl.dsp.window.close())
 
@@ -223,15 +221,16 @@ hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "X", hl.dsp.exit())
 
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "L", hl.dsp.exec_cmd("hyprlock"))
 
-hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("nemo"))
+hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd(fileManager))
 
-	hl.bind(mainMod .. " + " .. "T", hl.dsp.window.float())
+hl.bind(mainMod .. " + " .. "T", hl.dsp.window.float())
 
-hl.bind(mainMod .. " + " .. "Space", hl.dsp.exec_cmd("rofi -show drun"))
+hl.bind(mainMod .. " + " .. "Space", hl.dsp.exec_cmd(menu))
 
 hl.bind(mainMod .. " + " .. "P", hl.dsp.layout("togglesplit")) -- TODO: not working
 
-hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd("helium-browser"))
+hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "p", hl.dsp.exec_cmd("hyprpicker -a"))
 
 hl.bind(mainMod .. " + " .. "F", hl.dsp.window.fullscreen())
 
@@ -253,11 +252,9 @@ hl.bind(mainMod .. " + " .. "k", hl.dsp.focus({ direction = "up" }))
 
 hl.bind(mainMod .. " + " .. "j", hl.dsp.focus({ direction = "down" }))
 
--- Screenshot with hyprshot
-
+-- print and save to clipboard only
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
 
--- print and save to clipboard only
 
 -- Switch workspaces with mainMod + [0-9]
 
@@ -289,7 +286,6 @@ hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "R", hl.dsp.exec_cmd("~/.config/
 -- killall waybar processes
 hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
 
-
 -- Scroll through workspaces with mainMod + mouse scroll
 hl.bind(mainMod .. " + " .. "mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + " .. "mouse_up", hl.dsp.focus({ workspace = "e-1" }))
@@ -298,16 +294,17 @@ hl.bind(mainMod .. " + " .. "mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + " .. "mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + " .. "mouse:273", hl.dsp.window.resize(), { mouse = true })
 
+-- center and resizes focused window
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "C", function()
+  hl.dispatch(hl.dsp.window.float())
+  hl.dispatch(hl.dsp.window.resize({ x = 1440, y = 860, relative = false }))
+  hl.dispatch(hl.dsp.window.center())
+end)
 --## WINDOWS AND WORKSPACES ###
 
 -- https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
 -- https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "C", function()
-    hl.dispatch(hl.dsp.window.float())
-    hl.dispatch(hl.dsp.window.resize({ x = 1440, y = 860, relative = false }))
-    hl.dispatch(hl.dsp.window.center())
-end)
 
 hl.window_rule({
     name  = "suppress-maximize-events",
