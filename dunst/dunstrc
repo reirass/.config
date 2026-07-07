@@ -18,12 +18,12 @@
 
 [urgency_low]
     foreground = "#fff"
-    background = "#111111"
+    background = "#0b0a06"
     timeout = 3
 
 [urgency_normal]
     foreground = "#fff"
-    background = "#111111"
+    background = "#0b0a06"
     timeout = 5
 
 [urgency_critical]
