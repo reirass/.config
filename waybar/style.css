@@ -1,6 +1,6 @@
 * {
     border: none;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     min-height: 0;
     font-family: "CaskaydiaCove Nerd Font";
     font-weight: 800;
@@ -14,7 +14,7 @@ window#waybar {
 }
 
 tooltip {
-    background-color: #111111;
+    background-color:#111111;
     border: 2px solid #AFB0B0;
     color: #fac396;
 }
@@ -31,11 +31,11 @@ tooltip label {
 #memory,
 #cpu,
 #pulseaudio {
-    background-color: #111111;
+    background-color: #0b0a06;
     border: 1px solid #AFB0B0;
-    color: #fac396;
-    margin: 0 3px 0 0;
-    padding: 2px 10px;
+    color: #a09885;
+    margin: 0 1px 0 0;
+    padding: 0px 5px;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -59,9 +59,9 @@ tooltip label {
 }
 
 #workspaces {
-    background-color: #111111;
+    background-color: #0b0a06;
     border: 1px solid #AFB0B0;
-    margin: 0 3px;
+    margin: 0 1px;
 }
 
 #workspaces button {
@@ -69,13 +69,13 @@ tooltip label {
     min-width: 15px;
     box-shadow: inset 0 -3px transparent;
     padding: 2px 2px;
-    color: #fac399;
+    color: #a09885;
     transition: 0.2s all;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-    color: #ED8E53;
+    color: #f5f3f0;
 }
 
 #workspaces button.urgent {
@@ -123,49 +123,7 @@ tooltip label {
     border-color: #b8bb26;
 }
 
-
-menu {
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #282828;
-    min-width: 320px;
-    border: 1px solid #fabd2f;
-}
-
-menuitem {
-    padding: 12px;
-    margin: 3px;
-    border-radius: 6px;
-    font-size: 14px;
-    transition: 0.15s background-color;
-}
-
-menuitem:hover {
-    background-color: #504945;
-}
-
-menuitem label {
-    color: #ebdbb2;
-    font-weight: normal;
-}
-
-menuitem:active {
-    background-color: #98971a;
-}
-
-menuitem:selected {
-    background-color: #458588;
-}
-
 separator {
     margin: 6px 0;
     background-color: #665c54;
-}
-
-menuitem image {
-    color: #d79921;
-}
-
-menu arrow {
-    color: #b8bb26;
 }
