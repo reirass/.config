@@ -63,7 +63,7 @@ hl.env("HYPRCURSOR_SIZE", 24)
 
 hl.config({
     general = {
-        gaps_in = 1,
+        gaps_in = 0,
         gaps_out = 1,
         border_size = 1,
         -- https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
@@ -89,7 +89,7 @@ hl.config({
         active_opacity = 1,
         inactive_opacity = 1,
         shadow = {
-            enabled = true,
+            enabled = false,
             range = 40,
             render_power = 5,
             color = "rgba(00000060)",
