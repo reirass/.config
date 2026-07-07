@@ -64,7 +64,7 @@ hl.env("HYPRCURSOR_SIZE", 24)
 hl.config({
     general = {
         gaps_in = 0,
-        gaps_out = 1,
+        gaps_out = 0,
         border_size = 1,
         -- https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
         -- Set to true enable resizing windows by clicking and dragging on borders and gaps
@@ -73,8 +73,8 @@ hl.config({
         allow_tearing = false,
         layout = "dwindle",
         col = {
-            active_border = "rgba(FFFFFFaa)",
-            inactive_border = "rgba(7c6f64aa)",
+            active_border = "rgba(a09885aa)",
+            -- inactive_border = "rgba(7c6f64aa)",
         },
     },
 })
